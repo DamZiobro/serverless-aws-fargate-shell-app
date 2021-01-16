@@ -1,19 +1,19 @@
-Serverless AWS REST API 
+Serverless AWS Fargate ECS Task + AWS Lambda 
 ==================
 
 **CI/CD status**:
 ![](https://github.com/DamZiobro/serverless-aws-rest-api/workflows/CI/badge.svg)
 
-This is the skeleton for simple REST API implementation based on Python.
+This is the skeleton app for deploying ECS Tasks for AWS Fargate + AWS Lambda
+function to process them. 
 
-It is implemented based on this pattern:
-![](https://programmaticponderings.files.wordpress.com/2019/10/new-04-sqs-dynamodb.png)
+This app deploys ECS Task with SQL database based on public docker image `nouchka/sqlite3`
 
 Additionally, this simple project is demonstration of multiple modern technologies/methodologies/principles:
 
   * **Python** programming language
   * cloud-based app deployed to **Amazon Web Services (AWS)**
-  * **Serverless** (Serverless Framework) - AWS Lambda, SQS
+  * **Serverless** (Serverless Framework) - AWS Lambda, AWS Fargate, ECS
   * **Microservices** architecture (single resposiblity AWS Lambdas communicating via AWS SQS)
   * **Infrastracture as a Code** (IaaC) (Serverless framework - [serverless.yml](serverless.yml) defines infrastructure resources)
   * **DevOps**-based workflow (common code base with Makefile commands spanning Developers and Operations Teams together)
